@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    html body {
+        height: 100vh;
+        margin: 0px;
+        padding: 0px;
+        background-color: rgb(243, 237, 230);
+    }
+    
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 5%;
+        border-bottom: double;
+        border-color: rgb(83, 120, 149);
+        /* border-bottom: solid; */
+        /* border-color: rgb(9, 32, 63); */
+        background-color: rgb(243, 237, 230);
+        padding: 15px;
+    }
+    
+    .h1 {
+        font-size: 37px;
+        font-style: italic;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(83, 120, 149);
+    }
+    
+    @media (max-width: 500px) {
+        .h1 {
+            font-size: 1.2em;
+        }
+    }
+    
+    .main-container {
+        display: flex;
+        flex-direction: row;
+        /* background-color: crimson; */
+        height: 10%;
+        width: 30%;
+    }
+    
+    .container1 {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        background-color: rgb(243, 237, 230);
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    @media (max-width: 500px) {
+        .main-container {
+            width: 100vw;
+        }
+    }
+    
+    .main-container-menu {
+        display: flex;
+        flex-direction: column;
+        height: 78%;
+        width: 45%;
+        background-color: rgb(83, 120, 149);
+        border-radius: 25px;
+        margin: auto;
+        margin-top: 10px;
+    }
+    
+    @media (max-width: 500px) {
+        .main-container-menu {
+            width: 90%;
+        }
+    }
+    
+    span {
+        height: 17px;
+    }
+    
+    header {
+        display: flex;
+        /* background-color: aqua; */
+        font-style: italic;
+        color: cornsilk;
+        font-weight: 400;
+        font-size: 39px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        align-self: center;
+    }
+    
+    #myVideo {
+        position: fixed;
+        height: 100%;
+        width: auto;
+        z-index: -1;
+        right: 0;
+        bottom: 0;
+        object-fit: fill;
+    }
+    
+    @media (min-aspect-ratio: 16/9) {
+        #myVideo {
+            width: 100vw;
+        }
+    }
+    
+    .main-form {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(243, 237, 230);
+        height: 80%;
+        border-radius: 25px;
+        color: rgb(17, 36, 49);
+        font-size: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        /* margin-left: 15px; */
+    }
+    
+    option:checked {
+        height: 100px;
+        width: 100px;
+    }
+    
+    select {
+        width: 20%;
+    }
+    
+    p {
+        margin-left: 15px;
+    }
+    
+    .button {
+        display: inline-block;
+        margin: 30px;
+        font-size: 15px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        cursor: pointer;
+        text-align: center;
+        color: cornsilk;
+        border-radius: 10px;
+        box-shadow: 0 5px #999;
+        width: 5.4em;
+        height: 2.0em;
+        background-color: rgb(83, 120, 149);
+    }
+    
+    .button:hover {
+        background-color: rgb(17, 46, 68);
+    }
+    
+    .button:active {
+        background-color: rgb(17, 46, 68);
+        box-shadow: 0 3px rgb(83, 120, 149);
+        transform: translateY(5px);
+    }
+</style>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="static/coffee.mp4" type="video/mp4">
+    </video>
+    <div class="nav-container">
+        <h1 class="h1">Are you ready to start your journey?</h1>
+        <img src="static/Coffee-Logo.png" height="50" />
+
+    </div>
+    <div class="main-container">
+        <div class="container1">
+            <span>(4.567) 4.8</span>
+            <span>Valuation</span>
+        </div>
+        <div class="container1">
+            <span>(30' minutes)</span>
+            <span>Delivered time</span>
+        </div>
+        <div class="container1">
+            <span>(5.00$)</span>
+            <span>Minimum Price</span>
+        </div>
+    </div>
+    <div class="main-container-menu">
+        <span></span>
+        <header>Coffee is always a better choice...</header>
+        <div class="main-form">
+
+            <p>Which coffee would you like most?</p>
+            <label>
+                <input 
+                    name="prefer"
+                    value="Espresso"
+                    type="radio"
+                    class="input-checkbox"/>Espresso
+            </label>
+            <label>
+                <input 
+                    name="prefer"
+                    value="Cappuccino"
+                    type="radio"
+                    class="input-checkbox"/>Cappuccino
+            </label>
+            <label>
+                <input 
+                    name="prefer"
+                    value="Latte"
+                    type="radio"
+                    class="input-checkbox"/>Latte
+            </label>
+            <label>
+                <input 
+                    name="prefer"
+                    value="Irish"
+                    type="radio"
+                    class="input-checkbox"/>Irish Coffee
+            </label>
+            <label>
+                <input 
+                    name="prefer"
+                    value="Greek"
+                    type="radio"
+                    class="input-checkbox"/>Greek Coffee
+            </label>
+            <label>
+                <input 
+                    name="prefer"
+                    value="Frappuccino"
+                    type="radio"
+                    class="input-checkbox"/>Frappuccino
+            </label>
+            <label>
+                <input 
+                    name="prefer"
+                    value="Americano"
+                    type="radio"
+                    class="input-checkbox"
+                    />Americano
+            </label>
+            <p>How much sugar you add to your cofffee?</p>
+            <select>
+                <option value="With Sugar">With Sugar</option>
+                <option value="Without Sugar">Without Sugar</option>
+            </select>
+            <p>What's your favourite time to drink coffee?</p>
+            <select>
+                <option value="All day">All day long</option>
+                <option value="Morning">First thing in the morning</option>
+                <option value="Other">It depends on the day</option>
+                <option value="Afternoon">I'm a social coffee drinker, so with friends at afternoon</option>
+                
+            </select>
+            <div class="button">Submit</div>
+        </div>
+</body>
